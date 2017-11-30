@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <utility>
+#include <ctime>
 
 using namespace std;
 
@@ -11,6 +12,7 @@ using namespace std;
 int main()
 {
 
+    srand(time(NULL));
     ofstream out("scriptMovies.txt");
     string film [100] = {"Il padrino","I predatori dell\'arca perduta","L\'Impero colpisce ancora","Le ali della liberta",
     "Lo squalo","Quei bravi ragazzi","Apocalypse Now","Cantando sotto la pioggia","Pulp Fiction","Fight Club","Toro scatenato",
@@ -39,7 +41,7 @@ int main()
     string attori [100] = {"Christopher Lloyd","Jim Carrey","Malcolm McDowell","Tim Robbins","Uma Thurman","Kristen Stewart","Dennis Hopper","Leonardo DiCaprio","Jamie Bell","Michael Keaton","Peter Fonda","Dwight Schultz","Emile Hirsch","Jodie Foster","Marlon Brando","Matt Demon","George Peppard:","Jack Nicholson","Brad Pitt","Morgan Freeman","Marlon Brando","Keir Dullea","Gene Wilder","Colin Clive","Harrison Ford","Ewan McGregor","Paul Newman","Robert Thomas Pattinson","Henry Thomas","Dan Aykroyd","Tom Cruise","Madonna","Tom Hanks","Jennifer Grey","Jack Nicholson","Elijah Wood","Ian McKellen","Anthony Edwards","Miley Ray Cyrus","Anthony Hopkins","Daniel Radcliffe","Robin Williams","Val Kilmer","Leonardo DiCaprio","Jack Nicholson","John Belushi","Dev Patel","Kurt Russell","Michael Clarke Duncan","Robin Williams","Bruce Willis","Sylvester Stallone","Patrick Swayze","Kevin Spacey","Kevin Spacey","Sigourney Weaver","Ewan McGregor","Roy Scheider","Michael J. Fox","Tom Cruise","Russell Crowe","Al Pacino","Demi Moore","Laurence Fishburne","Pat Morita","Keanu Reeves","Anthony Perkins","Tom Hanks","Mickey Rourke","Gerard Butler","Clark Gable","Harrison Ford","Tom Hanks","Kate Winslet","Vivien Leigh","Madhur Mittal","Patrick Swayze","Linda Hamilton","Mr. T (Laurence Tureaud)","Ewen Bremner","Whoopi Goldberg","Robert Duvall","Brad Pitt","Gary Sinise","Dirk Benedict","Al Pacino","Carrie-Anne Moss","Jim Carrey","John Travolta","Clint Eastwood","Diego Abatantuono","Bud Spencer","Christian De Sica","Fernandel","Enrico Montesano","Enrico Montesano","Roberto Benigni","Kim Rossi Stuart","Pierfrancesco Favino","Roberto Benigni"};
     string personaggio [100] = {" Doc  Emmett L. Brown","Ace Ventura","Alexander DeLarge","Andy Dufresne","Beatrix Kiddo","Bella Swan","Billy","Billy Costigan","Billy Elliot","Bruce Wayne","Capitan America","Capitano H. M. Murdock","Christopher McCandless","Clarice Starling","Col. Walter E. Kurtz","Colin Sullivan","Colonnello John  Hannibal  Smith","Colonnello Nathan Jessep","detective David Mills","detective William Somerset","Don Vito Corleone","dottor David Bowman","Dottor Frederick Frankenstein","Dr. Henry Frankenstein","Dr. Richard Kimble","Ed Bloom","Eddie Felson","Edward Cullen","Elliott","Elwood Blues","Ethan Hunt","Eva Peron","Forrest Gump","Frances  Baby ","Frank Costello","Frodo Baggins","Gandalf","Goose","Hannah Montana","Hannibal Lecter","Harry Potter","Hunter  Patch  Adams","Iceman","Jack Dawson","Jack Torrance","Jake  Joliet  Blues","Jamal Malik","Jena Plissken","John Coffey","John Keating","John McClaine","John Rambo","Johnny Castle","Keyser Soze","Lester Burnham","Lt. Ellen Ripley","Mark Renton","Martin Brody","Marty McFly","Maverick","Maximus Decimus Meridius","Michael Corleone","Molly Jensen","Morpheus","Mr. Miyagi","Neo","Norman Bates","Paul Edgecombe","Randy \'The Ram\' Robinson","Re Leonida","Rhett Butler","Rick Deckard","Robert Langdon","Rose","Rossella O\'Hara","Salim","Sam Wheat","Sarah Connor","Sergente Bosco Albert  P. E./Pessimo Elemento  Baracus","Spud","Suor Maria Claretta","Ten. Col. William  Bill  Kilgore","tenente Aldo Raine","Tenente Dan","Tenente Templeton  Sberla  Peck","Tony Montana","Trinity","Truman Burbank","Vincent Vega","Walt Kowalski","Attila","Bambino","Don Buro","Don Camillo","Er Pomata","Glauco Sperandio","Guido Orefice","Il Freddo","Il Libano","Johnny Stecchino"};
     string risultato[2]={"\'WON\'","\'NOMINATED\'"};
-    string awards[5]={"Oscar, Best Actor","Oscar, Best Director","Oscar, Best Actress","Oscar, Best Picture","Oscar, Best Effects"};
+    string awards[6]={"Oscar, Best Actor","Oscar, Best Director","Oscar, Best Actress","Oscar, Best Picture","Oscar, Best Effects","Oscar, Best Film"};
 
 
     pair <string,int> filmAnno[100];
@@ -84,7 +86,7 @@ int main()
         out <<"INSERT INTO AWARDS () VALUES (\""
         <<filmAnno[randomInt].first<<"\","
         <<filmAnno[randomInt].second<<",\""
-        <<awards[(rand()%5)]<<"\","
+        <<awards[(rand()%6)]<<"\","
         <<risultato[(i%2)]<<");"<<endl;
     }
 

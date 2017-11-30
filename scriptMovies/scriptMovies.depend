@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1511791223 source:d:\documenti\unitn\ii anno\database\assignment2\scriptmovies\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	<utility>
+	<ctime>
+
