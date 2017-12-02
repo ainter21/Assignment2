@@ -12,4 +12,4 @@ and a1.Title<>a2.Title
 and a1.CharacterName = a2.CharacterName
 
 group by a1.CharacterName
-having count(*) = 2
+having count(*) >= 2

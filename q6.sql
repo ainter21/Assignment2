@@ -1,5 +1,5 @@
 SELECT DISTINCT
-    M.*
+    M.Title,M.Year
 FROM
     AWARDS A1,
     AWARDS A2,

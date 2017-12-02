@@ -1,4 +1,4 @@
-SELECT 	distinct M1.*, M2.*
+SELECT 	distinct M1.Title,M1.Year, M2.Title,M2.Year
 FROM 	MOVIES M1, MOVIES M2, AWARDS A1, AWARDS A2
 where 	A2.Result='WON' and
 		M1.Title=A1.Title and

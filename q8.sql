@@ -1,5 +1,5 @@
 SELECT 
-    MOVIES.*
+    MOVIES.Title,MOVIES.Year
 FROM
     AWARDS,
     MOVIES

@@ -1,5 +1,5 @@
 SELECT 
-    AVG(M.Rating), A.Award
+    A.Award, AVG(M.Rating)
 FROM
     AWARDS A,
     MOVIES M

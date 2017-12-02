@@ -1,12 +1,7 @@
 SELECT 
-    M1.Producer,sum(M1.gross)
+    M1.Producer, M1.Year, SUM(M1.Gross)
 FROM
-    MOVIES M1,
-    MOVIES M2
-WHERE
-    M1.Year = M2.Year
-        AND M1.Producer = M2.Producer
-        AND M1.Title <> M2.Title
-GROUP BY M1.Producer,M1.Year
-HAVING 	count(*)>=2 and
-		SUM(M1.Gross) > 50000000;
+    MOVIES M1
+GROUP BY M1.Producer , M1.Year
+HAVING COUNT(*) >= 2
+    AND SUM(M1.Gross) > 50000000
